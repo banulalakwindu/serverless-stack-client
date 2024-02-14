@@ -5,13 +5,21 @@ Welcome to the Serverless Scratch Frontend repository for our amazing note-takin
 This repository contains the React.js single page application that powers Scratch. It's seamlessly integrated with our serverless API, providing a smooth and responsive experience for users.
 
 ## Preview
-
-![Scratch App 1](./public/Screens/1.jpeg)
-![Scratch App 2](./public/Screens/2.jpeg)
-![Scratch App 3](./public/Screens/3.jpeg)
-![Scratch App 4](./public/Screens/4.jpeg)
-![Scratch App 5](./public/Screens/5.jpeg)
-![Scratch App 6](./public/Screens/6.jpeg)
+<p align="center">
+  <img alt="Scratch App 1" src="./public/Screens/1.jpeg" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Scratch App 2" src="./public/Screens/2.jpeg" width="45%">
+</p>
+<p align="center">
+  <img alt="Scratch App 3" src="./public/Screens/3.jpeg" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Scratch App 4" src="./public/Screens/4.jpeg" width="45%">
+</p>
+<p align="center">
+  <img alt="Scratch App 5" src="./public/Screens/5.jpeg" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Scratch App 6" src="./public/Screens/6.jpeg" width="45%">
+</p>
 
 ## Getting Started
 
