@@ -2,9 +2,10 @@
 
 Welcome to the Serverless Scratch Frontend repository for our amazing note-taking app, Scratch! 📝✨
 
-This repository contains the React.js single page application that powers Scratch. It's seamlessly integrated with our serverless API, providing a smooth and responsive experience for users.
+This repository contains the React.js single page application that powers Scratch. It's seamlessly integrated with our serverless API, providing a smooth and responsive experience for users. Followed the [Serverless Stack Tutorial](https://branchv41--serverless-stack.netlify.app) to build a secure, functional, and responsive web app.
 
 ## Preview
+
 <p align="center">
   <img alt="Scratch App 1" src="./public/Screens/1.jpeg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
@@ -27,7 +28,7 @@ To check out the fully functional app hosted on GitHub Pages, visit [Serverless 
 
 ### Backend Integration
 
-Our frontend is intricately connected to the backend, which is hosted separately. The backend repository contains the serverless API code and other backend-related functionalities. To explore the backend, visit [Serverless Scratch Backend](#backend-repo-link).
+Our frontend is intricately connected to the backend, which is hosted separately. The backend repository contains the serverless API code and other backend-related functionalities. To explore the backend, visit [Serverless Scratch Backend](https://github.com/banulalakwindu/serverless-stack-api).
 
 ### Serverless Architecture
 
