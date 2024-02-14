@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/serverless-stack-client/static/css/main.0059712e.css",
+    "main.js": "/serverless-stack-client/static/js/main.936b995e.js",
+    "index.html": "/serverless-stack-client/index.html",
+    "main.0059712e.css.map": "/serverless-stack-client/static/css/main.0059712e.css.map",
+    "main.936b995e.js.map": "/serverless-stack-client/static/js/main.936b995e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0059712e.css",
+    "static/js/main.936b995e.js"
+  ]
+}
