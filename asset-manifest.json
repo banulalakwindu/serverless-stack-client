@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/serverless-stack-client/static/css/main.0059712e.css",
-    "main.js": "/serverless-stack-client/static/js/main.a1a0380c.js",
+    "main.js": "/serverless-stack-client/static/js/main.066bff89.js",
     "index.html": "/serverless-stack-client/index.html",
     "main.0059712e.css.map": "/serverless-stack-client/static/css/main.0059712e.css.map",
-    "main.a1a0380c.js.map": "/serverless-stack-client/static/js/main.a1a0380c.js.map"
+    "main.066bff89.js.map": "/serverless-stack-client/static/js/main.066bff89.js.map"
   },
   "entrypoints": [
     "static/css/main.0059712e.css",
-    "static/js/main.a1a0380c.js"
+    "static/js/main.066bff89.js"
   ]
 }
