@@ -13,9 +13,9 @@ import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 export default function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/serverless-stack-client/" element={<Home />} />
       <Route
-        path="/login"
+        path="/serverless-stack-client/login"
         element={
           <UnauthenticatedRoute>
             <Login />
@@ -23,7 +23,7 @@ export default function AppRoutes() {
         }
       />
       <Route
-        path="/signup"
+        path="/serverless-stack-client/signup"
         element={
           <UnauthenticatedRoute>
             <Signup />
@@ -31,7 +31,7 @@ export default function AppRoutes() {
         }
       />
       <Route
-        path="/notes/new"
+        path="/serverless-stack-client/notes/new"
         element={
           <AuthenticatedRoute>
             <NewNote />
@@ -39,7 +39,7 @@ export default function AppRoutes() {
         }
       />
       <Route
-        path="/notes/:id"
+        path="/serverless-stack-client/notes/:id"
         element={
           <AuthenticatedRoute>
             <Notes />
@@ -47,7 +47,7 @@ export default function AppRoutes() {
         }
       />
       <Route
-        path="/settings"
+        path="/serverless-stack-client/settings"
         element={
           <AuthenticatedRoute>
             <Settings />

@@ -39,7 +39,7 @@ export default function Settings() {
       });
 
       alert("Your card has been charged successfully!");
-      navigate("/");
+      navigate("/serverless-stack-client/");
     } catch (e) {
       onError(e);
       setIsLoading(false);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import { ListGroup, ListGroupItem, Spinner } from "react-bootstrap";
 import { useAppContext } from "../libs/contextLib";
 import { LinkContainer } from "react-router-bootstrap";
 import { onError } from "../libs/errorLib";
@@ -10,11 +10,13 @@ export default function Home() {
   const [notes, setNotes] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
-  console.log(notes);
   function renderNotesList(notes) {
     return [{}].concat(notes).map((note, i) =>
       i !== 0 ? (
-        <LinkContainer key={note.noteId} to={`/notes/${note.noteId}`}>
+        <LinkContainer
+          key={note.noteId}
+          to={`/serverless-stack-client/notes/${note.noteId}`}
+        >
           <ListGroupItem>
             <h6>
               <b>{note.content.trim().split("\n")[0]}</b>
@@ -23,7 +25,7 @@ export default function Home() {
           </ListGroupItem>
         </LinkContainer>
       ) : (
-        <LinkContainer key="new" to="/notes/new">
+        <LinkContainer key="new" to="/serverless-stack-client/notes/new">
           <ListGroupItem>
             <h4>
               <b>{"\uFF0B"}</b> Create a new note
@@ -70,6 +72,11 @@ export default function Home() {
     return (
       <div className="notes mt-4">
         <h1>Your Notes</h1>
+        {isLoading ? (
+              <Spinner glyph="refresh" className="spinning" />
+          ) : (
+            ""
+          )}
         <ListGroup>{!isLoading && renderNotesList(notes)}</ListGroup>
       </div>
     );

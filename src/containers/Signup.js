@@ -60,7 +60,7 @@ export default function Signup() {
       await Auth.signIn(fields.email, fields.password);
 
       userHasAuthenticated(true);
-      navigate("/");
+      navigate("/serverless-stack-client/");
     } catch (e) {
       onError(e);
       setIsLoading(false);

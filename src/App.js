@@ -15,7 +15,7 @@ function App() {
   async function handleLogout() {
     await Auth.signOut();
     userHasAuthenticated(false);
-    navigate("/login");
+    navigate("/serverless-stack-client/login");
   }
   useEffect(() => {
     onLoad();
@@ -37,15 +37,19 @@ function App() {
     !isAuthenticating && (
       <div className="App container">
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand as={Link} to="/serverless-stack-client/">
             Scratch
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             {isAuthenticated ? (
               <Nav className="ms-auto">
-                <LinkContainer to="/settings">
-                  <Nav.Link onClick={() => navigate("/settings")}>
+                <LinkContainer to="/serverless-stack-client/settings">
+                  <Nav.Link
+                    onClick={() =>
+                      navigate("/serverless-stack-client/settings")
+                    }
+                  >
                     Settings
                   </Nav.Link>
                 </LinkContainer>
@@ -53,13 +57,19 @@ function App() {
               </Nav>
             ) : (
               <Nav className="ms-auto">
-                <LinkContainer to="/signup">
-                  <Nav.Link onClick={() => navigate("/signup")}>
+                <LinkContainer to="/serverless-stack-client/signup">
+                  <Nav.Link
+                    onClick={() => navigate("/serverless-stack-client/signup")}
+                  >
                     Signup
                   </Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
-                  <Nav.Link onClick={() => navigate("/login")}>Login</Nav.Link>
+                <LinkContainer to="/serverless-stack-client/login">
+                  <Nav.Link
+                    onClick={() => navigate("/serverless-stack-client/login")}
+                  >
+                    Login
+                  </Nav.Link>
                 </LinkContainer>
               </Nav>
             )}

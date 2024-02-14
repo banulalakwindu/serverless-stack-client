@@ -23,7 +23,11 @@ export default function UnauthenticatedRoute({ children, path }) {
   const redirect = querystring("redirect");
 
   if (isAuthenticated) {
-    navigate(redirect === "" || redirect === null ? "/" : redirect);
+    navigate(
+      redirect === "" || redirect === null
+        ? "/serverless-stack-client/"
+        : redirect
+    );
     return null;
   }
 

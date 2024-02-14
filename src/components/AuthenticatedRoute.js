@@ -9,7 +9,9 @@ export default function AuthenticatedRoute({ children }) {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate(`/login?redirect=${location.pathname}${location.search}`);
+      navigate(
+        `/serverless-stack-client/login?redirect=${location.pathname}${location.search}`
+      );
     }
   }, [isAuthenticated, navigate, location]);
 

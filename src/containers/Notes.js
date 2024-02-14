@@ -4,6 +4,7 @@ import { API, Storage } from "aws-amplify";
 import { onError } from "../libs/errorLib";
 import { Form, FormControl } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
+import { Spinner } from "react-bootstrap";
 import { s3Upload } from "../libs/awsLib";
 import config from "../config";
 import "./Notes.css";
@@ -15,6 +16,7 @@ export default function Notes() {
   const [note, setNote] = useState(null);
   const [content, setContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingStart, setIsLoadingStart] = useState(true);
   const [, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -36,6 +38,8 @@ export default function Notes() {
       } catch (e) {
         onError(e);
       }
+
+      setIsLoadingStart(false);
     }
 
     onLoad();
@@ -84,7 +88,7 @@ export default function Notes() {
         content,
         attachment: attachment || note.attachment,
       });
-      navigate("/");
+      navigate("/serverless-stack-client/");
     } catch (e) {
       onError(e);
       setIsLoading(false);
@@ -110,7 +114,7 @@ export default function Notes() {
 
     try {
       await deleteNote();
-      navigate("/");
+      navigate("/serverless-stack-client/");
     } catch (e) {
       onError(e);
       setIsDeleting(false);
@@ -130,6 +134,7 @@ export default function Notes() {
 
   return (
     <div className="Notes">
+      {isLoadingStart ? <Spinner glyph="refresh" className="spinning" /> : ""}
       {note && (
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="content">
