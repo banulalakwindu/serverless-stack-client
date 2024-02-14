@@ -43,11 +43,16 @@ function App() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             {isAuthenticated ? (
-              <Nav>
+              <Nav className="ms-auto">
+                <LinkContainer to="/settings">
+                  <Nav.Link onClick={() => navigate("/settings")}>
+                    Settings
+                  </Nav.Link>
+                </LinkContainer>
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </Nav>
             ) : (
-              <Nav className="ml-auto">
+              <Nav className="ms-auto">
                 <LinkContainer to="/signup">
                   <Nav.Link onClick={() => navigate("/signup")}>
                     Signup
